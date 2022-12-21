@@ -35,7 +35,7 @@ https://akash9796.github.io/Netflix-clone/
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Akash9796/Netflix-clone.git
 ```
 
 Go to the project directory
