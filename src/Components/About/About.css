@@ -1,0 +1,84 @@
+.main {
+  position: absolute;
+  height: fit-content;
+  overflow: hidden;
+}
+.main > img {
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+  filter: brightness(50%) blur(3px);
+}
+
+.page {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+}
+
+.container {
+  position: relative;
+  top: 100px;
+  /* width: 50%; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.container .logo > img {
+  width: 600px;
+  object-fit: contain;
+}
+.buttons {
+  display: flex;
+  margin: 5px;
+}
+button {
+  margin: 5px;
+  padding: 0 10px;
+  background: grey;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+button > p {
+  padding-left: 5px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.details {
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.details > p {
+  width: 70%;
+}
+
+@media screen and (max-width: 700px) {
+  .main > img {
+    background-size: fill;
+  }
+  .page {
+    flex-direction: column;
+  }
+  .container {
+    top: 20px;
+  }
+  .container .logo > img {
+    position: relative;
+    width: 270px;
+  }
+  .details {
+    width: 100%;
+  }
+}
