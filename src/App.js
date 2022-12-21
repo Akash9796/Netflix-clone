@@ -35,7 +35,7 @@ function App() {
   }, [dispatch, search, genreSelected, genre, pageNo]);
 
   return (
-    <Router basename="">
+    <Router basename="Netflix-clone">
       <div className="App">
         <Header />
 
