@@ -7,12 +7,12 @@ export default function About({ movies }) {
   const data = movies.filter((m) => m.id == params.id)[0];
   console.log(data);
 
-  const photo = window.innerWidth>700?"backdrop_path":"poster_path"
+  const photo = window.innerWidth > 700 ? "backdrop_path" : "poster_path";
 
   return (
     data && (
       <div>
-        <div className="main" {...photo}>
+        <div className="front" {...photo}>
           <img
             src={`https://image.tmdb.org/t/p/w300/${data?.backdrop_path}`}
             alt="Strangers Things"
@@ -22,7 +22,7 @@ export default function About({ movies }) {
           <div className="container">
             <div className="logo">
               <img
-                src={`https://image.tmdb.org/t/p/w300/${data?.backdrop_path}`}
+                src={`https://image.tmdb.org/t/p/w300/${data?.poster_path}`}
                 alt=""
               />
             </div>
@@ -39,7 +39,7 @@ export default function About({ movies }) {
             </div>
           </div>
           <div className="details">
-            <h1>Title:{data.title}</h1>
+            <h1>Title:{data.title ? data.title : data.name}</h1>
             <p>{data.overview}</p>
           </div>
         </div>

@@ -2,7 +2,7 @@
   /* width: 100%; */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: black;
   z-index: 100;
 }
@@ -19,11 +19,16 @@
   right: 0px;
 }
 
+.right{
+  display: flex;
+  align-items: center;
+}
+
+
+
 .left > a,
 .right > a {
-  /* display: flex; */
-  /* width: 1vw; */
-  height: 2vmax;
+  width: 1vw;
   margin: 1vmax 4vmax;
 }
 .left > a > svg,
@@ -60,10 +65,14 @@
   .header2false {
     display: contents;
   }
+  .left,.right{
+    display: flex;
+flex-direction: column;
+  }
   .left > a,
   .right > a {
-    position: relative;
-    display: flex;
+    display: flex;;
+    justify-content: center;
   }
   .menuIcon {
     display: block;

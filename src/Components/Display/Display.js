@@ -13,20 +13,26 @@ export default function Display({ genres, movies, setGenreID }) {
               </button>
             ))}
         </div>
-        <h1>More Like This</h1>
+        <h1>Top Trending..</h1>
         <div className="cart">
           {movies ? (
             movies.map((data) => (
-              <div className="cartItems" key={data.id}>
-                <Link to={`/detail/${data.id}`}>
-                  <img
-                    
-                    src={`https://image.tmdb.org/t/p/w300/${data?.backdrop_path}`}
-                    alt={data?.name}
-                  />
-                </Link>
-                <h1>{data?.title}</h1>
-              </div>
+              <>
+                <div className="cartItems" key={data.id}>
+                  <Link to={`/detail/${data.id}`}>
+                    <img
+                      src={`https://image.tmdb.org/t/p/w300/${data?.poster_path}`}
+                      alt={data?.name}
+                    />
+                  </Link>
+                  <h1>{data.title ? data.title : data.name}</h1>
+                  <div className="rating">
+                    <div className="circle">
+                      {Math.ceil(data.vote_average* 10)}%
+                    </div>
+                  </div>
+                </div>
+              </>
             ))
           ) : (
             <div>Loading</div>
@@ -36,4 +42,3 @@ export default function Display({ genres, movies, setGenreID }) {
     </>
   );
 }
-
