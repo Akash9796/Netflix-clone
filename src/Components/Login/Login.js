@@ -34,7 +34,7 @@ export default function Login() {
   return (
     <div className="login-page">
       <form onSubmit="{handleSubmit}">
-        <label htmlFor="username">Username:</label>
+        {/* <label htmlFor="username">Username:</label>
         <input
           type="text"
           id="username"
@@ -47,13 +47,13 @@ export default function Login() {
           id="password"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
-        />
+        /> */}
         <GoogleButton style={{ margin: "20px" }} onClick={handleGoogleSignIn} />
 
         {error && <p className="error">{error}</p>}
-        <button className="loginButton" type="submit">
+        {/* <button className="loginButton" type="submit">
           Log In
-        </button>
+        </button> */}
       </form>
     </div>
   );
