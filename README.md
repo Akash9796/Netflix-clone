@@ -14,6 +14,7 @@ In the name of optimization: Debouncing in searching , showing page no. in pagin
 
 ## Features
 
+- Login/Logout 
 - Pagination 
 - Search 
 - Details page
